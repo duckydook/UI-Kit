@@ -10,19 +10,18 @@ export default {
 const Template = (args) => ({
   components: { Swich },
   setup() {
-    let selected = ref()
+    let status = ref(true)
 
-    const setSelected = (value) => {
-      selected.value = value
+    const setStatus = (value) => {
+      status.value = value
     }
 
-    return { args, selected, setSelected };
+    return { args, status, setStatus };
   },
-  template: '<Swich v-bind="args" :value="selected" @select="setSelected" />',
+  template: '<Swich v-bind="args" @change="setStatus" />',
 });
 
 export const Primary = Template.bind({});
 Primary.args = {
-  placeholder: "Placeholder",
-  label: "Label",
+  value: true,
 };

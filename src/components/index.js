@@ -1,4 +1,5 @@
-import Select from "./select/Select.vue";
+import Swich from "./Swich/Swich.vue";
+
 export default {
-    Select
+    Swich
 };

@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("./fonts/Averta/Averta.css");
+
+body {
+  @apply averta-regular;
+}

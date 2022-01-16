@@ -28,7 +28,7 @@ export default {
 
 <style>
 .dg-swich {
-    @apply bg-blue-500 w-20 h-8 text-blue-500 rounded-full flex p-1 justify-between;
+    @apply w-20 h-8 text-blue-500 rounded-full flex p-1 justify-between;
 
     &:hover {
       @apply cursor-pointer;
@@ -42,8 +42,16 @@ export default {
       @apply bg-blue-200 w-6 h-6 rounded-full
     }
 
-    .active{
-      @apply bg-blue-100
+    &:not(.active) {
+      @apply bg-gray-400;
+
+      .dg-swich_circle{
+        @apply bg-gray-500
+      }
+    }
+
+    &.active{
+      @apply bg-dark-blue-500
     }
 }
 </style>

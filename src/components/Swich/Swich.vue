@@ -1,8 +1,8 @@
 <template>
-  <div class="dg-swich" @click="onToggleClick">
-    <div v-if="value" class="dg-swich_label">ON</div>
+  <div :class="['dg-swich',{active:value}]" @click="onToggleClick">
+    <div v-if="value" class="dg-swich_label dg-swich_on">ON</div>
     <div class="dg-swich_circle"></div>
-    <div v-if="!value" class="dg-swich_label">OFF</div>
+    <div v-if="!value" class="dg-swich_label dg-swich_off">OFF</div>
   </div>
 </template>
 
@@ -40,6 +40,10 @@ export default {
 
     &_circle{
       @apply bg-blue-200 w-6 h-6 rounded-full
+    }
+
+    .active{
+      @apply bg-blue-100
     }
 }
 </style>
